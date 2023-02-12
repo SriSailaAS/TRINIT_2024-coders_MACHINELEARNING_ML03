@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Price Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/normalize.css">
+
+</head>
+<body>
+        <header >
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8ac79a;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><b>Crop Price Prediction</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/"><b>Home Page</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about"><b>About Us</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/predictpage"><b>Crop recommendation</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/base"><b>Suggestion For Crop</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/fertilizer"><b>Feritilzer Predictions</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/cropprice"><b>Feritilzer Predictions</b></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+       
+    </header>
+    <div class="card-wrapper">
+
+        <div class="card">
+          <h1> Enter the details </h1>
+          <form action="/exactpredict" method="POST" id="features"></form>
+          <label for="commodity_name">commodity_name:</label>
+          <input type="text"id="commodity_name" name="commodity_name" class="field">
+          <label for="state">State:</label>
+          <input type="text"id="state" name="state" class="field">
+          <label for="district">district:</label>
+          <input type="text"id="district" name="district" class="field">
+          <label for="market">market:</label>
+          <input type="text"id="market" name="market" class="field">
+
+
+          </div>
+          <div class="card">
+            <label for="min_price">min_price:</label>
+            <input type="number"id="min_price" name="min_price" class="field">
+            <label for="max_price">max_price:</label>
+            <input type="number"id="max_price" name="max_price" class="field">
+            <label for="modal_price">modal_price:</label>
+            <input type="number"id="modal_price" name="max_price" class="field">
+          </div>
+    
+</body>
+</html>
